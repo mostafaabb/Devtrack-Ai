@@ -1,0 +1,4325 @@
+﻿.\venv\Scripts\python.exe : 
+--- Logging error ---
+At line:1 char:1
++ .\venv\Scripts\python.exe 
+-m uvicorn app.main:app 
+--port 8000 --host  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (--- Log  
+  ging error ---:String) [   
+ ], RemoteException
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f4cb' in 
+position 50: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+79, in serve
+    await 
+self._serve(sockets)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+86, in _serve
+    config.load()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\config.py", line 
+441, in load
+    self.loaded_app = 
+import_from_string(self.app)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\importer.py", 
+line 19, in 
+import_from_string
+    module = importlib.import
+_module(module_str)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\importlib\__init__.py
+", line 90, in import_module
+    return _bootstrap._gcd_im
+port(name[level:], package, 
+level)
+  File "<frozen 
+importlib._bootstrap>", line 
+1387, in _gcd_import
+  File "<frozen 
+importlib._bootstrap>", line 
+1360, in _find_and_load
+  File "<frozen 
+importlib._bootstrap>", line 
+1331, in 
+_find_and_load_unlocked
+  File "<frozen 
+importlib._bootstrap>", line 
+935, in _load_unlocked
+  File "<frozen importlib._bo
+otstrap_external>", line 
+995, in exec_module
+  File "<frozen 
+importlib._bootstrap>", line 
+488, in 
+_call_with_frames_removed
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+30, in <module>
+    from 
+app.api.conversations import 
+router as 
+conversations_router
+  File "<frozen 
+importlib._bootstrap>", line 
+1360, in _find_and_load
+  File "<frozen 
+importlib._bootstrap>", line 
+1331, in 
+_find_and_load_unlocked
+  File "<frozen 
+importlib._bootstrap>", line 
+935, in _load_unlocked
+  File "<frozen importlib._bo
+otstrap_external>", line 
+995, in exec_module
+  File "<frozen 
+importlib._bootstrap>", line 
+488, in 
+_call_with_frames_removed
+  File "C:\Users\USER\Desktop
+\DevTrack\app\api\conversatio
+ns.py", line 21, in <module>
+    from 
+app.services.rag_service 
+import rag_service
+  File "<frozen 
+importlib._bootstrap>", line 
+1360, in _find_and_load
+  File "<frozen 
+importlib._bootstrap>", line 
+1331, in 
+_find_and_load_unlocked
+  File "<frozen 
+importlib._bootstrap>", line 
+935, in _load_unlocked
+  File "<frozen importlib._bo
+otstrap_external>", line 
+995, in exec_module
+  File "<frozen 
+importlib._bootstrap>", line 
+488, in 
+_call_with_frames_removed
+  File "C:\Users\USER\Desktop
+\DevTrack\app\services\rag_se
+rvice.py", line 402, in 
+<module>
+    rag_service = 
+RAGService()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\services\rag_se
+rvice.py", line 162, in 
+__init__
+    self.embedder = Embedding
+Provider(getattr(settings, 
+"GEMINI_API_KEY", ""))
+  File "C:\Users\USER\Desktop
+\DevTrack\app\services\rag_se
+rvice.py", line 94, in 
+__init__
+    logger.info("\U0001f4cb 
+Embedding provider: 
+Hash-based (keyword matching 
+enabled)")
+Message: '\U0001f4cb 
+Embedding provider: 
+Hash-based (keyword matching 
+enabled)'
+Arguments: ()
+20:54:57 [32mINFO[0m [devtrack.rag:_init_index:176] FAISS not available ù using keyword matching
+INFO:     Started server 
+process [15532]
+INFO:     Waiting for 
+application startup.
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f680' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+140, in startup_event
+    logger.info(f"\U0001f680 
+Starting {settings.APP_NAME} 
+v{settings.APP_VERSION}")
+Message: '\U0001f680 
+Starting DevTrack AI v2.0.0'
+Arguments: ()
+20:54:57 [32mINFO[0m [devtrack:startup_event:141]    Environment: DEVELOPMENT
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\u2705' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+146, in startup_event
+    logger.info("\u2705 
+Database initialized")
+Message: '\u2705 Database 
+initialized'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f4e1' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+158, in startup_event
+    logger.info(f"\U0001f4e1 
+API Docs: http://localhost:80
+00/api/docs")
+Message: '\U0001f4e1 API 
+Docs: http://localhost:8000/a
+pi/docs'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f310' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+159, in startup_event
+    logger.info(f"\U0001f310 
+Dashboard: 
+http://localhost:8000")
+Message: '\U0001f310 
+Dashboard: 
+http://localhost:8000'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f50c' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+160, in startup_event
+    logger.info(f"\U0001f50c 
+WebSocket: ws://localhost:800
+0/ws?token=<JWT>")
+Message: '\U0001f50c 
+WebSocket: ws://localhost:800
+0/ws?token=<JWT>'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f4e7' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+161, in startup_event
+    logger.info(f"\U0001f4e7 
+Email: {'SMTP configured' if 
+settings.SMTP_HOST else 'Dev 
+mode (logging only)'}")
+Message: '\U0001f4e7 Email: 
+Dev mode (logging only)'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call 
+last):
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\logging\__init__.py",
+ line 1163, in emit
+    stream.write(msg + 
+self.terminator)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\encodings\cp1252.py",
+ line 19, in encode
+    return codecs.charmap_enc
+ode(input,self.errors,encodin
+g_table)[0]
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^
+UnicodeEncodeError: 
+'charmap' codec can't encode 
+character '\U0001f510' in 
+position 52: character maps 
+to <undefined>
+Call stack:
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\__main__.py", 
+line 4, in <module>
+    uvicorn.main()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1485, in __call__
+    return self.main(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+1269, in invoke
+    return 
+ctx.invoke(self.callback, 
+**ctx.params)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\click\core.py", line 
+824, in invoke
+    return callback(*args, 
+**kwargs)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+433, in main
+    run(
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\main.py", line 
+606, in run
+    server.run()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\server.py", line 
+75, in run
+    return asyncio_run(self.s
+erve(sockets=sockets), loop_f
+actory=self.config.get_loop_f
+actory())
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 194, in run
+    return runner.run(main)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\runners.py", 
+line 118, in run
+    return self._loop.run_unt
+il_complete(task)
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 674, in 
+run_until_complete
+    self.run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\windows_event
+s.py", line 322, in 
+run_forever
+    super().run_forever()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 641, in run_forever
+    self._run_once()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\base_events.p
+y", line 1987, in _run_once
+    handle._run()
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\asyncio\events.py", 
+line 88, in _run
+    self._context.run(self._c
+allback, *self._args)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\lifespan\on.py", 
+line 86, in main
+    await app(scope, 
+self.receive, self.send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\uvicorn\middleware\proxy_
+headers.py", line 29, in 
+__call__
+    return await 
+self.app(scope, receive, 
+send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\applications.py",
+ line 1159, in __call__
+    await 
+super().__call__(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\applications.py
+", line 90, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\erro
+rs.py", line 151, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\base
+.py", line 103, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\cors
+.py", line 80, in __call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\middleware\exce
+ptions.py", line 49, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\middleware\asynce
+xitstack.py", line 18, in 
+__call__
+    await self.app(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 660, in __call__
+    await 
+self.middleware_stack(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 669, in app
+    await 
+self.lifespan(scope, 
+receive, send)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\starlette\routing.py", 
+line 638, in lifespan
+    async with 
+self.lifespan_context(app) 
+as maybe_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\AppData
+\Local\Programs\Python\Python
+312\Lib\contextlib.py", line 
+210, in __aenter__
+    return await 
+anext(self.gen)
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 216, in merged_lifespan
+    async with 
+original_context(app) as 
+maybe_original_state:
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 241, in __aenter__
+    await 
+self._router._startup()
+  File "C:\Users\USER\Desktop
+\DevTrack\venv\Lib\site-packa
+ges\fastapi\routing.py", 
+line 4884, in _startup
+    await handler()
+  File "C:\Users\USER\Desktop
+\DevTrack\app\main.py", line 
+162, in startup_event
+    logger.info(f"\U0001f510 
+Email verification: 
+{'Required' if settings.REQUI
+RE_EMAIL_VERIFICATION else 
+'Disabled'}")
+Message: '\U0001f510 Email 
+verification: Disabled'
+Arguments: ()
+INFO:     Application 
+startup complete.
+INFO:     Uvicorn running on 
+http://0.0.0.0:8000 (Press 
+CTRL+C to quit)
+20:55:30 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/health -> 200 (5.89ms) [56e24e2b]
+20:55:31 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /favicon.ico -> 404 (4.97ms) [87375b0c]
+20:55:41 [32mINFO[0m [devtrack.middleware:dispatch:38] GET / -> 200 (586.42ms) [633c6380]
+20:55:42 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 769, in get_ai_insights
+    "total_customers": db.query(func.count(Customer.id)).filter(Customer.business_id == business_id).scalar() or 0,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+20:55:43 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/insights -> 500 (1449.63ms) [dbf412a7]
+20:55:43 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 713, in get_analytics_summary
+    ).scalar() or 0
+      ^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+20:55:43 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/summary -> 500 (1781.27ms) [ad5f1f48]
+20:55:43 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(orders.id) AS count_1 
+FROM orders 
+WHERE orders.business_id = ? AND orders.created_at >= ? AND orders.created_at < ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 812, in get_chart_data
+    ).scalar() or 0
+      ^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(orders.id) AS count_1 
+FROM orders 
+WHERE orders.business_id = ? AND orders.created_at >= ? AND orders.created_at < ?]
+[parameters: [{}]]
+20:55:43 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/chart-data -> 500 (1822.72ms) [e55d1f8b]
+20:56:35 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT anon_1.conversations_id AS anon_1_conversations_id, anon_1.conversations_business_id AS anon_1_conversations_business_id, anon_1.conversations_customer_id AS anon_1_conversations_customer_id, anon_1.conversations_channel AS anon_1_conversations_channel, anon_1.conversations_status AS anon_1_conversations_status, anon_1.conversations_subject AS anon_1_conversations_subject, anon_1.conversations_is_ai_enabled AS anon_1_conversations_is_ai_enabled, anon_1.conversations_ai_persona AS anon_1_conversations_ai_persona, anon_1.conversations_assigned_to AS anon_1_conversations_assigned_to, anon_1.conversations_sentiment_score AS anon_1_conversations_sentiment_score, anon_1.conversations_created_at AS anon_1_conversations_created_at, anon_1.conversations_updated_at AS anon_1_conversations_updated_at, anon_1.conversations_last_message_at AS anon_1_conversations_last_message_at, customers_1.id AS customers_1_id, customers_1.business_id AS customers_1_business_id, customers_1.name AS customers_1_name, customers_1.email AS customers_1_email, customers_1.phone AS customers_1_phone, customers_1.channel AS customers_1_channel, customers_1.channel_id AS customers_1_channel_id, customers_1.avatar_url AS customers_1_avatar_url, customers_1.notes AS customers_1_notes, customers_1.tags AS customers_1_tags, customers_1.extra_data AS customers_1_extra_data, customers_1.created_at AS customers_1_created_at, customers_1.updated_at AS customers_1_updated_at, customers_1.last_seen AS customers_1_last_seen, messages_1.id AS messages_1_id, messages_1.conversation_id AS messages_1_conversation_id, messages_1.content AS messages_1_content, messages_1.sender_type AS messages_1_sender_type, messages_1.sender_id AS messages_1_sender_id, messages_1.ai_intent AS messages_1_ai_intent, messages_1.ai_confidence AS messages_1_ai_confidence, messages_1.ai_action_taken AS messages_1_ai_action_taken, messages_1.is_read AS messages_1_is_read, messages_1.created_at AS messages_1_created_at 
+FROM (SELECT conversations.id AS conversations_id, conversations.business_id AS conversations_business_id, conversations.customer_id AS conversations_customer_id, conversations.channel AS conversations_channel, conversations.status AS conversations_status, conversations.subject AS conversations_subject, conversations.is_ai_enabled AS conversations_is_ai_enabled, conversations.ai_persona AS conversations_ai_persona, conversations.assigned_to AS conversations_assigned_to, conversations.sentiment_score AS conversations_sentiment_score, conversations.created_at AS conversations_created_at, conversations.updated_at AS conversations_updated_at, conversations.last_message_at AS conversations_last_message_at 
+FROM conversations 
+WHERE conversations.business_id = ? ORDER BY conversations.last_message_at DESC
+ LIMIT ? OFFSET ?) AS anon_1 LEFT OUTER JOIN customers AS customers_1 ON customers_1.id = anon_1.conversations_customer_id LEFT OUTER JOIN messages AS messages_1 ON anon_1.conversations_id = messages_1.conversation_id ORDER BY anon_1.conversations_last_message_at DESC, messages_1.created_at]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\conversations.py", line 48, in list_conversations
+    ).offset(offset).limit(limit).all()
+                                  ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT anon_1.conversations_id AS anon_1_conversations_id, anon_1.conversations_business_id AS anon_1_conversations_business_id, anon_1.conversations_customer_id AS anon_1_conversations_customer_id, anon_1.conversations_channel AS anon_1_conversations_channel, anon_1.conversations_status AS anon_1_conversations_status, anon_1.conversations_subject AS anon_1_conversations_subject, anon_1.conversations_is_ai_enabled AS anon_1_conversations_is_ai_enabled, anon_1.conversations_ai_persona AS anon_1_conversations_ai_persona, anon_1.conversations_assigned_to AS anon_1_conversations_assigned_to, anon_1.conversations_sentiment_score AS anon_1_conversations_sentiment_score, anon_1.conversations_created_at AS anon_1_conversations_created_at, anon_1.conversations_updated_at AS anon_1_conversations_updated_at, anon_1.conversations_last_message_at AS anon_1_conversations_last_message_at, customers_1.id AS customers_1_id, customers_1.business_id AS customers_1_business_id, customers_1.name AS customers_1_name, customers_1.email AS customers_1_email, customers_1.phone AS customers_1_phone, customers_1.channel AS customers_1_channel, customers_1.channel_id AS customers_1_channel_id, customers_1.avatar_url AS customers_1_avatar_url, customers_1.notes AS customers_1_notes, customers_1.tags AS customers_1_tags, customers_1.extra_data AS customers_1_extra_data, customers_1.created_at AS customers_1_created_at, customers_1.updated_at AS customers_1_updated_at, customers_1.last_seen AS customers_1_last_seen, messages_1.id AS messages_1_id, messages_1.conversation_id AS messages_1_conversation_id, messages_1.content AS messages_1_content, messages_1.sender_type AS messages_1_sender_type, messages_1.sender_id AS messages_1_sender_id, messages_1.ai_intent AS messages_1_ai_intent, messages_1.ai_confidence AS messages_1_ai_confidence, messages_1.ai_action_taken AS messages_1_ai_action_taken, messages_1.is_read AS messages_1_is_read, messages_1.created_at AS messages_1_created_at 
+FROM (SELECT conversations.id AS conversations_id, conversations.business_id AS conversations_business_id, conversations.customer_id AS conversations_customer_id, conversations.channel AS conversations_channel, conversations.status AS conversations_status, conversations.subject AS conversations_subject, conversations.is_ai_enabled AS conversations_is_ai_enabled, conversations.ai_persona AS conversations_ai_persona, conversations.assigned_to AS conversations_assigned_to, conversations.sentiment_score AS conversations_sentiment_score, conversations.created_at AS conversations_created_at, conversations.updated_at AS conversations_updated_at, conversations.last_message_at AS conversations_last_message_at 
+FROM conversations 
+WHERE conversations.business_id = ? ORDER BY conversations.last_message_at DESC
+ LIMIT ? OFFSET ?) AS anon_1 LEFT OUTER JOIN customers AS customers_1 ON customers_1.id = anon_1.conversations_customer_id LEFT OUTER JOIN messages AS messages_1 ON anon_1.conversations_id = messages_1.conversation_id ORDER BY anon_1.conversations_last_message_at DESC, messages_1.created_at]
+[parameters: [{}]]
+20:56:35 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/conversations/ -> 500 (491.45ms) [48e68326]
+20:56:50 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 769, in get_ai_insights
+    "total_customers": db.query(func.count(Customer.id)).filter(Customer.business_id == business_id).scalar() or 0,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+20:56:50 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/insights -> 500 (328.09ms) [38ec7875]
+20:56:50 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(orders.id) AS count_1 
+FROM orders 
+WHERE orders.business_id = ? AND orders.created_at >= ? AND orders.created_at < ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 812, in get_chart_data
+    ).scalar() or 0
+      ^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(orders.id) AS count_1 
+FROM orders 
+WHERE orders.business_id = ? AND orders.created_at >= ? AND orders.created_at < ?]
+[parameters: [{}]]
+20:56:50 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 713, in get_analytics_summary
+    ).scalar() or 0
+      ^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2835, in scalar
+    ret = self.one()
+          ^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT count(customers.id) AS count_1 
+FROM customers 
+WHERE customers.business_id = ?]
+[parameters: [{}]]
+20:56:51 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/chart-data -> 500 (607.7ms) [281ae079]
+20:56:51 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/analytics/summary -> 500 (636.46ms) [1f5b8a92]
+20:57:13 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT anon_1.conversations_id AS anon_1_conversations_id, anon_1.conversations_business_id AS anon_1_conversations_business_id, anon_1.conversations_customer_id AS anon_1_conversations_customer_id, anon_1.conversations_channel AS anon_1_conversations_channel, anon_1.conversations_status AS anon_1_conversations_status, anon_1.conversations_subject AS anon_1_conversations_subject, anon_1.conversations_is_ai_enabled AS anon_1_conversations_is_ai_enabled, anon_1.conversations_ai_persona AS anon_1_conversations_ai_persona, anon_1.conversations_assigned_to AS anon_1_conversations_assigned_to, anon_1.conversations_sentiment_score AS anon_1_conversations_sentiment_score, anon_1.conversations_created_at AS anon_1_conversations_created_at, anon_1.conversations_updated_at AS anon_1_conversations_updated_at, anon_1.conversations_last_message_at AS anon_1_conversations_last_message_at, customers_1.id AS customers_1_id, customers_1.business_id AS customers_1_business_id, customers_1.name AS customers_1_name, customers_1.email AS customers_1_email, customers_1.phone AS customers_1_phone, customers_1.channel AS customers_1_channel, customers_1.channel_id AS customers_1_channel_id, customers_1.avatar_url AS customers_1_avatar_url, customers_1.notes AS customers_1_notes, customers_1.tags AS customers_1_tags, customers_1.extra_data AS customers_1_extra_data, customers_1.created_at AS customers_1_created_at, customers_1.updated_at AS customers_1_updated_at, customers_1.last_seen AS customers_1_last_seen, messages_1.id AS messages_1_id, messages_1.conversation_id AS messages_1_conversation_id, messages_1.content AS messages_1_content, messages_1.sender_type AS messages_1_sender_type, messages_1.sender_id AS messages_1_sender_id, messages_1.ai_intent AS messages_1_ai_intent, messages_1.ai_confidence AS messages_1_ai_confidence, messages_1.ai_action_taken AS messages_1_ai_action_taken, messages_1.is_read AS messages_1_is_read, messages_1.created_at AS messages_1_created_at 
+FROM (SELECT conversations.id AS conversations_id, conversations.business_id AS conversations_business_id, conversations.customer_id AS conversations_customer_id, conversations.channel AS conversations_channel, conversations.status AS conversations_status, conversations.subject AS conversations_subject, conversations.is_ai_enabled AS conversations_is_ai_enabled, conversations.ai_persona AS conversations_ai_persona, conversations.assigned_to AS conversations_assigned_to, conversations.sentiment_score AS conversations_sentiment_score, conversations.created_at AS conversations_created_at, conversations.updated_at AS conversations_updated_at, conversations.last_message_at AS conversations_last_message_at 
+FROM conversations 
+WHERE conversations.business_id = ? ORDER BY conversations.last_message_at DESC
+ LIMIT ? OFFSET ?) AS anon_1 LEFT OUTER JOIN customers AS customers_1 ON customers_1.id = anon_1.conversations_customer_id LEFT OUTER JOIN messages AS messages_1 ON anon_1.conversations_id = messages_1.conversation_id ORDER BY anon_1.conversations_last_message_at DESC, messages_1.created_at]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\conversations.py", line 48, in list_conversations
+    ).offset(offset).limit(limit).all()
+                                  ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT anon_1.conversations_id AS anon_1_conversations_id, anon_1.conversations_business_id AS anon_1_conversations_business_id, anon_1.conversations_customer_id AS anon_1_conversations_customer_id, anon_1.conversations_channel AS anon_1_conversations_channel, anon_1.conversations_status AS anon_1_conversations_status, anon_1.conversations_subject AS anon_1_conversations_subject, anon_1.conversations_is_ai_enabled AS anon_1_conversations_is_ai_enabled, anon_1.conversations_ai_persona AS anon_1_conversations_ai_persona, anon_1.conversations_assigned_to AS anon_1_conversations_assigned_to, anon_1.conversations_sentiment_score AS anon_1_conversations_sentiment_score, anon_1.conversations_created_at AS anon_1_conversations_created_at, anon_1.conversations_updated_at AS anon_1_conversations_updated_at, anon_1.conversations_last_message_at AS anon_1_conversations_last_message_at, customers_1.id AS customers_1_id, customers_1.business_id AS customers_1_business_id, customers_1.name AS customers_1_name, customers_1.email AS customers_1_email, customers_1.phone AS customers_1_phone, customers_1.channel AS customers_1_channel, customers_1.channel_id AS customers_1_channel_id, customers_1.avatar_url AS customers_1_avatar_url, customers_1.notes AS customers_1_notes, customers_1.tags AS customers_1_tags, customers_1.extra_data AS customers_1_extra_data, customers_1.created_at AS customers_1_created_at, customers_1.updated_at AS customers_1_updated_at, customers_1.last_seen AS customers_1_last_seen, messages_1.id AS messages_1_id, messages_1.conversation_id AS messages_1_conversation_id, messages_1.content AS messages_1_content, messages_1.sender_type AS messages_1_sender_type, messages_1.sender_id AS messages_1_sender_id, messages_1.ai_intent AS messages_1_ai_intent, messages_1.ai_confidence AS messages_1_ai_confidence, messages_1.ai_action_taken AS messages_1_ai_action_taken, messages_1.is_read AS messages_1_is_read, messages_1.created_at AS messages_1_created_at 
+FROM (SELECT conversations.id AS conversations_id, conversations.business_id AS conversations_business_id, conversations.customer_id AS conversations_customer_id, conversations.channel AS conversations_channel, conversations.status AS conversations_status, conversations.subject AS conversations_subject, conversations.is_ai_enabled AS conversations_is_ai_enabled, conversations.ai_persona AS conversations_ai_persona, conversations.assigned_to AS conversations_assigned_to, conversations.sentiment_score AS conversations_sentiment_score, conversations.created_at AS conversations_created_at, conversations.updated_at AS conversations_updated_at, conversations.last_message_at AS conversations_last_message_at 
+FROM conversations 
+WHERE conversations.business_id = ? ORDER BY conversations.last_message_at DESC
+ LIMIT ? OFFSET ?) AS anon_1 LEFT OUTER JOIN customers AS customers_1 ON customers_1.id = anon_1.conversations_customer_id LEFT OUTER JOIN messages AS messages_1 ON anon_1.conversations_id = messages_1.conversation_id ORDER BY anon_1.conversations_last_message_at DESC, messages_1.created_at]
+[parameters: [{}]]
+20:57:13 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/conversations/ -> 500 (204.3ms) [2b6eaf4e]
+20:57:54 [31mERROR[0m [devtrack.middleware:dispatch:171] Unhandled exception: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT customers.id AS customers_id, customers.business_id AS customers_business_id, customers.name AS customers_name, customers.email AS customers_email, customers.phone AS customers_phone, customers.channel AS customers_channel, customers.channel_id AS customers_channel_id, customers.avatar_url AS customers_avatar_url, customers.notes AS customers_notes, customers.tags AS customers_tags, customers.extra_data AS customers_extra_data, customers.created_at AS customers_created_at, customers.updated_at AS customers_updated_at, customers.last_seen AS customers_last_seen 
+FROM customers 
+WHERE customers.business_id = ? ORDER BY customers.created_at DESC
+ LIMIT ? OFFSET ?]
+[parameters: [{}]]
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+AttributeError: 'str' object has no attribute 'hex'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 169, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+  File "C:\Users\USER\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_utils.py", line 87, in collapse_excgroups
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\core\middleware.py", line 96, in dispatch
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\fastapi\routing.py", line 330, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\app\api\routes.py", line 67, in list_customers
+    return query.order_by(Customer.created_at.desc()).offset(offset).limit(limit).all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2704, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2249, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1821, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1815, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1496, in _init_compiled
+    flattened_processors[key](compiled_params[key])
+  File "C:\Users\USER\Desktop\DevTrack\venv\Lib\site-packages\sqlalchemy\sql\sqltypes.py", line 3734, in process
+    value = value.hex
+            ^^^^^^^^^
+sqlalchemy.exc.StatementError: (builtins.AttributeError) 'str' object has no attribute 'hex'
+[SQL: SELECT customers.id AS customers_id, customers.business_id AS customers_business_id, customers.name AS customers_name, customers.email AS customers_email, customers.phone AS customers_phone, customers.channel AS customers_channel, customers.channel_id AS customers_channel_id, customers.avatar_url AS customers_avatar_url, customers.notes AS customers_notes, customers.tags AS customers_tags, customers.extra_data AS customers_extra_data, customers.created_at AS customers_created_at, customers.updated_at AS customers_updated_at, customers.last_seen AS customers_last_seen 
+FROM customers 
+WHERE customers.business_id = ? ORDER BY customers.created_at DESC
+ LIMIT ? OFFSET ?]
+[parameters: [{}]]
+20:57:54 [32mINFO[0m [devtrack.middleware:dispatch:38] GET /api/v1/customers/ -> 500 (63.55ms) [2ee39fd0]
